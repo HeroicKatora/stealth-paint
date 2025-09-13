@@ -248,8 +248,8 @@ impl Surface {
         } else {
             tracing::info!("No gpu key, device lost or not initialized?");
             let mut descriptor = Program::minimal_device_descriptor();
-            descriptor.required_limits.max_texture_dimension_1d = 4096;
-            descriptor.required_limits.max_texture_dimension_2d = 4096;
+            descriptor.required_limits.max_texture_dimension_1d = 2048;
+            descriptor.required_limits.max_texture_dimension_2d = 2048;
 
             let gpu = self
                 .pool
